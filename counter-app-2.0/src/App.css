@@ -1,0 +1,43 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.counter-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border: 8px;
+  background-color: darkgrey;
+  border-radius: 10px;
+  width: 800px;
+  height: 500px;
+  gap: 50px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.counter-label {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0;
+  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 600px) {
+  .counter-label h2 {
+    font-size: 1.8rem;
+  }
+
+  .buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
