@@ -1,19 +1,22 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import './App.css'
 import Button from './components/Button'
+import { useCounter } from './hooks/useCounter';
 
 function App() {
 
-  const [count, setCount] = useState(0);
+  const { count, increment, decrement, reset } = useCounter(0);
 
-  const increase = () => setCount(count + 1);
-  const decrease = () => setCount(count - 1);
+  useEffect(() => {
+    document.title = `Contador: ${count}`;
+  }, [count])
 
   return (
     <div className='counter'>
       <div className='btns'>
-        <Button onClick={increase}>Incrementar</Button>
-        <Button onClick={decrease}>Decrementar</Button>
+        <Button onClick={increment}>Incrementar</Button>
+        <Button onClick={decrement}>Decrementar</Button>
+        <Button onClick={reset}>Reiniciar</Button>
       </div>
       <div>
         <h2 className='counter-label'>
