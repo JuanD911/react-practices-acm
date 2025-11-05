@@ -16,6 +16,11 @@
   width: 800px;
   height: 500px;
   gap: 50px;
+  transition: background-color 0.5s ease, color 0.5s ease, box-shadow 0.5s ease;
+}
+
+button {
+  transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
 }
 
 .buttons {
@@ -29,6 +34,7 @@
   font-weight: 700;
   margin: 0;
   text-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: color 0.5s ease, text-shadow 0.5s ease;
 }
 
 @media (max-width: 600px) {
@@ -40,4 +46,21 @@
     flex-direction: column;
     gap: 10px;
   }
+}
+
+.dark-mode {
+    background-color: #2c2c2c;
+    color: #f5f5f5;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.dark-mode button {
+    background-color: #4a4a4a;
+    color: #e0e0e0;
+    border-color: #666;
+}
+
+.light-mode {
+    background-color: #ffffff;
+    color: #333333;
 }
